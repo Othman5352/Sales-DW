@@ -19,7 +19,15 @@ It is designed to demonstrate real-world data engineering practices, including l
 
 ![Architecture](./docs/data_architecture.png)
 
-### Layered Structure:
+### 🔄 Layered Structure
+
+This project follows a modern layered architecture approach commonly used in Data Engineering. The goal is to separate raw data from cleaned and modeled data for better maintainability, scalability, and traceability.
+
+**Layer Descriptions:**
+
+- 🟫 **Bronze Layer**: Raw data ingested as-is from CSV files (ERP & CRM). No transformation is applied.
+- 🥈 **Silver Layer**: Cleaned and transformed data. Standardized formats, cleaned nulls, and basic business rules applied.
+- 🥇 **Gold Layer**: Final presentation layer. Data modeled in a Star Schema using views (`dim_customers`, `dim_products`, `fact_sales`) ready for analytics and reporting.
 
 
 ---
@@ -63,8 +71,7 @@ It is designed to demonstrate real-world data engineering practices, including l
 - T-SQL (Stored Procedures, Views)
 - CSV File Integration
 - Dimensional Modeling
-- Bronze–Silver–Gold Architecture
-
+- Medallian Architecture (Bronze–Silver–Gold) 
 ---
 
 ## 📈 Future Improvements
